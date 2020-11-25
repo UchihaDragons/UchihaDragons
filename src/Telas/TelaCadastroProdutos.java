@@ -5,18 +5,20 @@
  */
 package Telas;
 
+import Conexoes.Conexao;
+import DaoObjetos.DaoProdutos;
+import BeansObjetos.BeansProduto;
 import static java.lang.Thread.sleep;
+import java.util.HashSet;
+import java.util.Set;
 import javax.swing.ImageIcon;
 
-/**
- *
- * @author Otavio
- */
 public class TelaCadastroProdutos extends javax.swing.JFrame {
 
-    /**
-     * Creates new form TelaCadastroProdutos
-     */
+    BeansProduto ObjetoProduto = new BeansProduto();
+    Conexao conex = new Conexao();
+    DaoProdutos DaoProduto = new DaoProdutos();
+    
     public TelaCadastroProdutos() {
         initComponents();
         pnlNovoProduto.setVisible(false);
@@ -347,7 +349,15 @@ public class TelaCadastroProdutos extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCancelarActionPerformed
 
     private void btnSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarActionPerformed
-        // TODO add your handling code here:
+        
+        ObjetoProduto.setNome(txtNome.getText());
+        ObjetoProduto.setTel1(txt1Tel.getText());
+        ObjetoProduto.setTel2(txt2Tel.getText());
+        ObjetoProduto.setEmail(txtEmail.getText());
+        ObjetoProduto.setFornecedor(txtFornecedor.getText());
+        ObjetoProduto.setMarca(txtMarca.getText());
+        
+        DaoProduto.SalvarProdutos(ObjetoProduto);
     }//GEN-LAST:event_btnSalvarActionPerformed
 
     private void btnMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenuActionPerformed

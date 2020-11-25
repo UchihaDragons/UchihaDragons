@@ -2,17 +2,31 @@ package Telas;
 
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
+import Conexoes.*;
 
 
 public class TelaLogin extends javax.swing.JFrame {
 
-    /**
-     * Creates new form TelaLogin
-     */
+    Conexao conecta = new Conexao();
+    
+    
     public TelaLogin() {
         initComponents();
         
+        //fazer a conexao com o banco de dados
+        conecta.conectar();
+        
+        
         //Setar Imagens Nos Componentes
+        
+        ImageIcon Logo = new ImageIcon("src/imagens/Logo_Loja.JPG");
+        Logo.setImage(Logo.getImage().getScaledInstance(
+                lblLogo.getWidth(), 
+                lblLogo.getHeight(),
+                1));
+        lblLogo.setIcon(Logo);
+        
+        
         ImageIcon Minimizar = new ImageIcon("src/imagens/IconeMinimizar.png");
         Minimizar.setImage(Minimizar.getImage().getScaledInstance(
                 btnMinimizar.getWidth(), 
@@ -92,11 +106,13 @@ public class TelaLogin extends javax.swing.JFrame {
         pnlLogin.add(txtLogin);
         txtLogin.setBounds(100, 70, 110, 30);
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBackground(new java.awt.Color(51, 51, 51));
         jPanel1.setLayout(null);
 
-        btnAcessar.setFont(new java.awt.Font("Arial Narrow", 0, 24)); // NOI18N
+        btnAcessar.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        btnAcessar.setForeground(new java.awt.Color(255, 255, 255));
         btnAcessar.setText("Acessar");
+        btnAcessar.setBorder(null);
         btnAcessar.setContentAreaFilled(false);
         btnAcessar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -125,7 +141,6 @@ public class TelaLogin extends javax.swing.JFrame {
 
         btnFechar.setBackground(new java.awt.Color(0, 0, 0));
         btnFechar.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
-        btnFechar.setText("X");
         btnFechar.setToolTipText("Fechar");
         btnFechar.setBorder(null);
         btnFechar.setContentAreaFilled(false);
@@ -139,7 +154,6 @@ public class TelaLogin extends javax.swing.JFrame {
 
         btnMinimizar.setBackground(new java.awt.Color(255, 255, 255));
         btnMinimizar.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
-        btnMinimizar.setText("_");
         btnMinimizar.setToolTipText("Minimizar");
         btnMinimizar.setBorder(null);
         btnMinimizar.setContentAreaFilled(false);
@@ -149,7 +163,7 @@ public class TelaLogin extends javax.swing.JFrame {
             }
         });
         pnlLogin.add(btnMinimizar);
-        btnMinimizar.setBounds(150, 10, 40, 20);
+        btnMinimizar.setBounds(160, 10, 20, 20);
 
         txtSenha.setBackground(new java.awt.Color(102, 102, 102));
         txtSenha.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -158,34 +172,22 @@ public class TelaLogin extends javax.swing.JFrame {
         txtSenha.setBounds(100, 110, 110, 30);
 
         getContentPane().add(pnlLogin);
-        pnlLogin.setBounds(220, 0, 240, 260);
+        pnlLogin.setBounds(310, 0, 240, 280);
 
         bg.setBackground(new java.awt.Color(255, 255, 255));
-
-        javax.swing.GroupLayout bgLayout = new javax.swing.GroupLayout(bg);
-        bg.setLayout(bgLayout);
-        bgLayout.setHorizontalGroup(
-            bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(bgLayout.createSequentialGroup()
-                .addGap(49, 49, 49)
-                .addComponent(lblLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(48, Short.MAX_VALUE))
-        );
-        bgLayout.setVerticalGroup(
-            bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(bgLayout.createSequentialGroup()
-                .addGap(63, 63, 63)
-                .addComponent(lblLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(79, Short.MAX_VALUE))
-        );
+        bg.setLayout(null);
+        bg.add(lblLogo);
+        lblLogo.setBounds(0, 0, 310, 280);
 
         getContentPane().add(bg);
-        bg.setBounds(0, 0, 220, 260);
+        bg.setBounds(0, 0, 310, 280);
 
-        setSize(new java.awt.Dimension(458, 258));
+        setSize(new java.awt.Dimension(548, 280));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+    
+    
     private void btnDuvidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDuvidaActionPerformed
         JOptionPane.showMessageDialog(null, "Apenas Funcionarios Cadastrados!");
 
@@ -217,7 +219,7 @@ public class TelaLogin extends javax.swing.JFrame {
     }//GEN-LAST:event_btnAcessarActionPerformed
 
     private void btnMinimizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMinimizarActionPerformed
-        // TODO add your handling code here:
+        setExtendedState(ICONIFIED);
     }//GEN-LAST:event_btnMinimizarActionPerformed
 
     /**
@@ -254,7 +256,7 @@ public class TelaLogin extends javax.swing.JFrame {
             }
         });
     }
-
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel bg;
     private javax.swing.JButton btnAcessar;
