@@ -1,9 +1,11 @@
-# UchihaDragons
+
+
+![dra_logo](https://github.com/UchihaDragons/UchihaDragons/blob/main/Logo_Loja.JPG)
 
 Pensando sempre em você
 ==
 
-![Dragao](https://github.com/UchihaDragons/UchihaDragons/blob/main/banguela.gif)
+
 
 Olá, bem vindos a UchihaDragons
 
