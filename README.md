@@ -1,7 +1,7 @@
 # UchihaDragons
 
 Pensando sempre em você
-=
+==
 
 ![Dragao](https://github.com/UchihaDragons/UchihaDragons/blob/main/banguela.gif)
 
