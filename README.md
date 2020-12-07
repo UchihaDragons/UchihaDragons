@@ -40,3 +40,10 @@ Diagrama de Classes
 Diagrama Relacional
 =
 ![Diagrama relacional](https://github.com/UchihaDragons/UchihaDragons/blob/main/dIAGRAM%20R.png)
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+Linguagens Utilizadas
+=
+MySQL
+
+JAVA
