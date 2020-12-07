@@ -22,3 +22,18 @@ Dá só uma olhada na nossa loja, que está pegando fogo.
 
 
 ![Fogo](https://github.com/UchihaDragons/UchihaDragons/blob/main/fogo.gif)
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Diagrama de Classes
+=
+
+![Diagrama de classe](https://github.com/UchihaDragons/UchihaDragons/blob/main/Diagram%20de%20classe.jfif)
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Diagrama Relacional
+=
+![Diagrama relacional](https://github.com/UchihaDragons/UchihaDragons/blob/main/dIAGRAM%20R.png)
