@@ -29,7 +29,7 @@ Dá só uma olhada na nossa loja, que está pegando fogo.
 ------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-Diagrama de Classes
+Diagrama Relacional
 =
 
 ![Diagrama de classe](https://github.com/UchihaDragons/UchihaDragons/blob/main/Diagram%20de%20classe.jfif)
@@ -37,7 +37,7 @@ Diagrama de Classes
 ------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-Diagrama Relacional
+Diagrama de Classes
 =
 ![Diagrama relacional](https://github.com/UchihaDragons/UchihaDragons/blob/main/dIAGRAM%20R.png)
 
